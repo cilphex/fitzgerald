@@ -2,3 +2,10 @@ name: fitzgerald
 material-design-icons:
   - name: navigation/menu
   - name: action/search
+  - name: action/book
+  - name: action/info
+  - name: editor/format_quote
+  - name: image/photo_camera
+  - name: action/favorite
+  # - name: action/star_rate
+  - name: toggle/star
