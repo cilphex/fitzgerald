@@ -86,17 +86,21 @@ class _PageFrameState extends State<PageFrame> {
     );
   }
 
-  Widget _buildBody() {
-    // return new Center(
-    //   child: new Text('Fitzgerald App')
-    // );
-    return novelsPage();
-  }
+  // Widget _buildBody() {
+  //   // return new Center(
+  //   //   child: new Text('Fitzgerald App')
+  //   // );
+  //   // return novelsPage();
+  // }
 
   Widget build(BuildContext context) {
     return new Scaffold(
       toolBar: _buildToolBar(),
-      body: _buildBody()
+      body: new Scaffold(
+        body: new Center(
+          child: new Text('Novels')
+        )
+      )
     );
   }
 }
