@@ -1,0 +1,4 @@
+name: fitzgerald
+material-design-icons:
+  - name: navigation/menu
+  - name: action/search
