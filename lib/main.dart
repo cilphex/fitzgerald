@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 part 'src/page_frame.dart';
 part 'src/pages/novels.dart';
 part 'src/pages/novellas.dart';
+part 'src/pages/short_stories.dart';
+part 'src/pages/quotes.dart';
+part 'src/pages/photos.dart';
 part 'src/pages/about.dart';
 
 enum Page {
@@ -12,7 +15,7 @@ enum Page {
   novellas,
   short_stories,
   quotes,
-  pictures,
+  photos,
   about
 }
 

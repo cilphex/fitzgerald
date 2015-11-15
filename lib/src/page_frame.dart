@@ -20,7 +20,7 @@ class _PageFrameState extends State<PageFrame> {
       case Page.novellas: return "Novellas";
       case Page.short_stories: return "Short stories";
       case Page.quotes: return "Quotes";
-      case Page.pictures: return "Pictures";
+      case Page.photos: return "Photos";
       case Page.about: return "About F. Scott Fitzgerald";
       default: return "Untitled page";
     }
@@ -54,8 +54,8 @@ class _PageFrameState extends State<PageFrame> {
         ),
         new DrawerItem(
           icon: 'image/photo_camera',
-          child: new Text('Pictures'),
-          onPressed: () => _handlePageChange(Page.pictures)
+          child: new Text('Photos'),
+          onPressed: () => _handlePageChange(Page.photos)
         ),
         new DrawerItem(
           icon: 'action/info',
@@ -66,10 +66,6 @@ class _PageFrameState extends State<PageFrame> {
         new DrawerItem(
           icon: 'toggle/star',
           child: new Text('Rate the app')
-        ),
-        new DrawerItem(
-          icon: 'action/favorite',
-          child: new Text('Donate')
         )
       ])
     );
@@ -86,21 +82,22 @@ class _PageFrameState extends State<PageFrame> {
     );
   }
 
-  // Widget _buildBody() {
-  //   // return new Center(
-  //   //   child: new Text('Fitzgerald App')
-  //   // );
-  //   // return novelsPage();
-  // }
+  Widget _buildBody() {
+    switch(_page) {
+      case Page.novels: return new NovelsPage();
+      case Page.novellas: return new NovellasPage();
+      case Page.short_stories: return new ShortStoriesPage();
+      case Page.quotes: return new QuotesPage();
+      case Page.photos: return new PhotosPage();
+      case Page.about: return new AboutPage();
+      default: return new NovelsPage();
+    }
+  }
 
   Widget build(BuildContext context) {
     return new Scaffold(
       toolBar: _buildToolBar(),
-      body: new Scaffold(
-        body: new Center(
-          child: new Text('Novels')
-        )
-      )
+      body: _buildBody()
     );
   }
 }
